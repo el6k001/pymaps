@@ -1,0 +1,276 @@
+/* styles.css */
+
+:root {
+    --primary-bg: #121212;
+    --secondary-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #ffbd59;
+    --hover-color: #ffa726;
+    --card-bg: #242424;
+    --card-header-bg: #2a2a2a;
+    --border-color: #333333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: var(--primary-bg);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dropdown {
+    margin-bottom: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--card-header-bg);
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-bg);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+    color: var(--primary-bg);
+}
+
+.form-control {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    background-color: var(--secondary-bg);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 189, 89, 0.25);
+    color: var(--text-color);
+}
+
+/* Estilização dos sliders */
+.rc-slider-track {
+    background-color: var(--accent-color);
+}
+
+.rc-slider-handle {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.rc-slider-handle:hover {
+    border-color: var(--hover-color);
+}
+
+.rc-slider-handle:active {
+    border-color: var(--hover-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Estilização do toggle switch */
+.toggle-switch .rc-switch {
+    background-color: var(--secondary-bg);
+}
+
+.toggle-switch .rc-switch-checked {
+    background-color: var(--accent-color);
+}
+
+/* Estilização dos inputs de cor */
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    padding: 0;
+    width: 32px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+/* Estilização da área de upload */
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilização do mapa */
+.map-container {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustes para garantir texto branco em fundos escuros */
+.card, .card-header, .card-body, .navbar, .btn-secondary, .dropdown-menu {
+    color: var(--text-color);
+}
+
+.dropdown-item {
+    color: var(--text-color);
+    background-color: var(--secondary-bg);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* Estilização específica para o menu lateral */
+.sidebar {
+    background-color: var(--primary-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar .card {
+    background-color: var(--card-bg);
+}
+
+.sidebar .card-header {
+    background-color: var(--card-header-bg);
+}
+
+/* Estilos para os dropdowns */
+.Select-control,
+.Select-menu-outer,
+.Select-option,
+.Select-value-label,
+.Select-placeholder,
+.Select-input > input,
+.Select--single > .Select-control .Select-value,
+.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.VirtualizedSelectOption {
+    color: black !important;
+    background-color: white !important;
+}
+
+.Select-option:hover,
+.Select-option.is-focused,
+.VirtualizedSelectFocusedOption {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+}
+
+.Select-option.is-selected {
+    background-color: #ddd !important;
+    color: black !important;
+}
+
+.Select-arrow-zone {
+    color: black !important;
+}
+
+.Select.is-open > .Select-control {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Estilos específicos para o react-virtualized-select */
+.VirtualizedSelectOption {
+    color: black !important;
+}
+
+/* Garantir que o texto do item selecionado também seja preto */
+.Select--single > .Select-control .Select-value .Select-value-label,
+.Select--single > .Select-control .Select-value .Select-value-label span {
+    color: black !important;
+}
+
+/* Estilização para o Accordion */
+.accordion-button {
+    background-color: var(--card-header-bg);
+    color: var(--accent-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+}
+
+.accordion-body {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-item {
+        margin-right: 0.5rem;
+    }
+}
