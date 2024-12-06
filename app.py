@@ -8,7 +8,7 @@ from map_utils import generate_brazil_map, generate_region_map, generate_uf_with
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, '/assets/styles.css'])
 app.layout = app_layout
-server - app.server
+server = app.server
 
 
 @app.callback(
