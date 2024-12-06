@@ -6,3 +6,4 @@ matplotlib==3.5.2
 geopandas==0.14.3
 shapely==2.0.2
 werkzeug==2.0.2
+gunicorn
