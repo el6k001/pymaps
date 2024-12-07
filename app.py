@@ -27,7 +27,8 @@ logger = logging.getLogger(__name__)
 app = dash.Dash(
     __name__,
     external_stylesheets=[dbc.themes.BOOTSTRAP, '/assets/styles.css'],
-    suppress_callback_exceptions=True
+    suppress_callback_exceptions=True,
+    title="PyMaps"
 )
 
 # Configuração do servidor
