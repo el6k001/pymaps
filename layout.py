@@ -187,7 +187,7 @@ app_layout = html.Div(className='dashboard-container', children=[
                                     ),
                                     className='upload-area mb-3'
                                 ),
-                                html.Div(id="marker-upload-error", className="text-danger mb-2"),
+                                html.Div(id="marker-upload-error-message", className="text-danger mb-2"),
                                 dcc.Store(id='uploaded-marker-image-store'),
                             ]),
                             
