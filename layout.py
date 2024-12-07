@@ -124,7 +124,7 @@ app_layout = html.Div(className='dashboard-container', children=[
                                 ),
                                 className='upload-area mb-3'
                             ),
-                            html.Div(id="upload-error", className="text-danger mb-2"),
+                            html.Div(id="upload-error-message", className="text-danger mb-2"),
                             
                             dcc.Store(id='uploaded-data-store'),
                             
