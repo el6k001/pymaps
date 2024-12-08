@@ -1,1 +1,1 @@
-web: gunicorn app:server --workers 2 --threads 4 --timeout 120 --max-requests 500 --max-requests-jitter 100 --preload --worker-class gthread --worker-tmp-dir /dev/shm --keep-alive 5 --log-file - --access-logfile - --error-logfile - --log-level info
+web: gunicorn app:server --workers 2 --threads 4 --worker-class gthread --worker-tmp-dir /dev/shm --timeout 120 --backlog 2048 --max-requests 500 --max-requests-jitter 100 --preload --keep-alive 5 --log-level info --log-file - --access-logfile - --error-logfile - --forwarded-allow-ips="*" --graceful-timeout 120
